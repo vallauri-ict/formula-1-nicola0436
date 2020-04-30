@@ -1,7 +1,4 @@
 # Formula One Project
-
-_Canavero Gianni - 5B INF_
-
 This project offers a crud and a webapi for Formula1 Championship.<br>
 
 Done on Visual Studio 2017 platform.<br>
@@ -20,7 +17,6 @@ C# library for the db connection, providing classes for every table.
 ### Project 3 - FormulaOneCrudForm
 
 C# form that works as a simple crud.
-
 
 ### Project 4 - FormulaOneWebForm
 
