@@ -1,0 +1,9 @@
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\bin\Debug\FormulaOneBatchConsoleProject.exe.config
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\bin\Debug\FormulaOneBatchConsoleProject.exe
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\bin\Debug\FormulaOneBatchConsoleProject.pdb
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\bin\Debug\FormulaOneDll.dll
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\bin\Debug\FormulaOneDll.pdb
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\obj\Debug\FormulaOneBatchConsoleProject.csprojResolveAssemblyReference.cache
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\obj\Debug\FormulaOneBatchConsoleProject.csproj.CoreCompileInputs.cache
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\obj\Debug\FormulaOneBatchConsoleProject.exe
+D:\5B\INFO\FormulaOneSolution\FormulaOneBatchConsoleProject\obj\Debug\FormulaOneBatchConsoleProject.pdb

@@ -1,0 +1,14 @@
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\bin\Debug\FormulaOneCrudFormProject.exe.config
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\bin\Debug\FormulaOneCrudFormProject.exe
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\bin\Debug\FormulaOneCrudFormProject.pdb
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\bin\Debug\FormulaOneDll.dll
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\bin\Debug\FormulaOneDll.pdb
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\obj\Debug\FormulaOneCrudFormProject.csprojAssemblyReference.cache
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\obj\Debug\FormulaOneCrudFormProject.FormMain.resources
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\obj\Debug\FormulaOneCrudFormProject.Properties.Resources.resources
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\obj\Debug\FormulaOneCrudFormProject.csproj.GenerateResource.cache
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\obj\Debug\FormulaOneCrudFormProject.csproj.CopyComplete
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\obj\Debug\FormulaOneCrudFormProject.exe
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\obj\Debug\FormulaOneCrudFormProject.pdb
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\bin\Debug\Newtonsoft.Json.dll
+I:\5B\INFO\FormulaOneSolution\FormulaOneCrudFormProject\bin\Debug\Newtonsoft.Json.xml

@@ -62,3 +62,11 @@ D:\5B\INFO\formula-1-gcanavero0417\FormulaOneDll\obj\Debug\FormulaOneDll.csprojR
 D:\5B\INFO\formula-1-gcanavero0417\FormulaOneDll\obj\Debug\FormulaOneDll.csproj.CoreCompileInputs.cache
 D:\5B\INFO\formula-1-gcanavero0417\FormulaOneDll\obj\Debug\FormulaOneDll.dll
 D:\5B\INFO\formula-1-gcanavero0417\FormulaOneDll\obj\Debug\FormulaOneDll.pdb
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\bin\Debug\FormulaOneDll.dll
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\bin\Debug\FormulaOneDll.pdb
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\bin\Debug\Newtonsoft.Json.dll
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\bin\Debug\Newtonsoft.Json.xml
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.csprojAssemblyReference.cache
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.csproj.CopyComplete
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.dll
+D:\paner\Documents\GitHub\formula-1-nicola0436\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.pdb

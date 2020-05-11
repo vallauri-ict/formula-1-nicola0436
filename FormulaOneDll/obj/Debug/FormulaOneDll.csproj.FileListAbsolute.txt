@@ -1,0 +1,8 @@
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\bin\Debug\FormulaOneDll.dll
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\bin\Debug\FormulaOneDll.pdb
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\bin\Debug\Newtonsoft.Json.dll
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\bin\Debug\Newtonsoft.Json.xml
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.csprojAssemblyReference.cache
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.csproj.CopyComplete
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.dll
+D:\paner\Desktop\formula-1-nicola0436\FormulaOneDll\obj\Debug\FormulaOneDll.pdb
