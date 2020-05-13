@@ -4,9 +4,51 @@
     <meta charset="utf-8" />
     <title>FormulaOne Web Api</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="https://www.formula1.com">
+            <img src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg" alt="Formula 1">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="linkDrivers">Drivers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="linkTeams">Teams</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="linkCircuits">Circuits</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--inizio container titolo e descrizione-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10"><h1 id="containerTitle">Formula 1</h1></div>
+            <div class="col-1"></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-6"><p id="containerDesc">Enter the world of Formula 1. Your go-to source for the latest F1 news, video highlights, GP results, live timing, in-depth analysis and expert commentary.</p></div>
+        </div>
+    </div>
+    <!--inizio container creazione dinamica-->
+    <div class="container-fluid" id="container">
+        
+    </div>
 </body>
 </html>

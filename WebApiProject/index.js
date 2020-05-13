@@ -1,7 +1,71 @@
 ﻿"use strict;"
 
 $(function () {
-    
+    let container = $("#container");
+    let containerTitle = $("#containerTitle");
+    let containerDesc = $("#containerDesc");
+
+    $("#linkDrivers").on("click", function () {
+        container.html("");
+        containerTitle.text("F1 Drivers 2020");
+        containerDesc.text("Stability is the name of the game for the 2020 season, with eight of the 10 Formula 1 teams fielding unaltered line-ups in their bid for Grand Prix glory. So where are the changes? The highly-rated Esteban Ocon returns with Renault after a year on the F1 sidelines, while Williams’ Nicholas Latifi has the honour of being the sole rookie on the grid.");
+
+        inviaRichiesta("/drivers", function (data) {
+            let row = $("<div>").addClass("row justify-content-center").appendTo(container);
+            for (let driver of data) {
+                let card = $("<div>").addClass("col-3 card").prop("id",driver.ID).appendTo(row);
+                let rowCard = $("<div>").addClass("row no-gutters").appendTo(card);
+                let col5 = $("<div>").addClass("col-md-5").appendTo(rowCard);
+                let col7 = $("<div>").addClass("col-md-7").appendTo(rowCard);
+                $("<h5>").addClass("title-country").text(driver.Country.CountryCode).appendTo(col5);
+                $("<img>").addClass("img-fluid float-right").prop("src", driver.Img).appendTo(col5);
+                let bodyCard = $("<div>").addClass("card-body").appendTo(col7);
+                let bodyCol = $("<div>").addClass("col").appendTo(bodyCard);
+                $("<h4>").addClass("title-name text-center").text(driver.Firstname).appendTo(bodyCol); 
+                $("<h4>").addClass("title-lastname text-center").text(driver.Lastname).appendTo(bodyCol);
+                $("<br>").appendTo(bodyCol);
+                $("<p>").text("POB: " + driver.PlaceOfBirthday).appendTo(bodyCol);
+                let dt = new Date(driver.Dob);
+                $("<p>").text("DOB: " + dt.getDay()+"/"+dt.getMonth()+"/"+dt.getFullYear()).appendTo(bodyCol);
+            }
+        });
+    });
+    $("#linkTeams").on("click", function () {
+        container.html("");
+        containerTitle.text("F1 Teams 2020");
+        containerDesc.text("Discover the Formula 1 2020 teams - drivers, podium finishes, championship titles and everything you need to know about the teams in this year's F1 Championship.");
+        inviaRichiesta("/teams", function (data) {
+            let row = $("<div>").addClass("row justify-content-center").appendTo(container);
+            for (let team of data) {
+                let card = $("<div>").addClass("col-5 card").prop("id", team.ID).appendTo(row);
+                let rowCard = $("<div>").addClass("row").appendTo(card);
+                let col = $("<div>").addClass("col-12").appendTo(rowCard);
+                let colTitleTeam = $("<div>").addClass("col-title-team").appendTo(col);
+                $("<h2>").addClass("title-team").text(team.Name).appendTo(colTitleTeam);
+                $("<img>").addClass("img float-right img-team").prop("src", team.Logo).appendTo(colTitleTeam);
+                rowCard = $("<div>").addClass("row").appendTo(card);
+
+                col = $("<div>").addClass("col-6").appendTo(rowCard);
+                let divTeamDriver = $("<div>").addClass("div-team-driver").appendTo(col);
+                divTeamDriver.html(" <p class='teamDr'>" + team.FirstDriver.Firstname + "</p>&nbsp;&nbsp;<h5 class='title-name teamDr'>" + team.FirstDriver.Lastname + "</h5>");
+                $("<img>").addClass("img float-right img-team-driver").prop("src", team.FirstDriver.Img).appendTo(divTeamDriver);
+
+                col = $("<div>").addClass("col-6").appendTo(rowCard);
+                divTeamDriver = $("<div>").addClass("div-team-driver").appendTo(col);
+                divTeamDriver.html(" <p class='teamDr'>" + team.SecondDriver.Firstname + "</p>&nbsp;&nbsp;<h5 class='title-name teamDr'>" + team.SecondDriver.Lastname + "</h5>");
+                $("<img>").addClass("img float-right img-team-driver").prop("src", team.SecondDriver.Img).appendTo(divTeamDriver);
+
+                rowCard = $("<div>").addClass("row justify-content-center").appendTo(card);
+                col = $("<div>").addClass("col-9").appendTo(rowCard);
+                $("<img>").prop("src", team.Img).css("width", "100%").appendTo(col);
+            }
+        });
+    });
+    $("#linkCircuits").on("click", function () {
+        container.html("");
+        containerTitlet.text("F1 Circuits 2020");
+        containerDesc.text("");
+    });
 });
 
 function inviaRichiesta(parameters,callbackFunction) {

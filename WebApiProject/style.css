@@ -1,0 +1,89 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: F1;
+    src: url(fonts/F1-regular.otf);
+}
+body {
+    font-family: F1;
+    color:black;
+}
+h1 {
+    font-size: 62px;
+    font-weight: 900;
+    border-top-right-radius: 20px;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    margin-top:50px;
+}
+.card {
+    border: 0px;
+    border-top-right-radius: 20px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    margin-top: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-left: 1px;
+}
+    .card:hover {
+        border-top: 2px solid #e10600;
+        border-right: 2px solid #e10600;
+        transform: translateY(-10px);
+        transition-duration: 0.5s;
+    }
+.title-name {
+    font-size: 1.5em !important;
+    font-weight:900 !important;
+}
+.title-lastname {
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    font-size: 1.5em !important;
+    font-weight: 900 !important;
+}
+.title-country {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.navbar-dark {
+    background-color: #e10600 !important;
+}
+.nav-item{
+    font-size:larger;
+    padding:10px;
+}
+#container {
+    margin-bottom: 100px;
+}
+.title-team {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: 900 !important;
+    display: inline-block;
+}
+.img-team{
+    width: 80px;
+    margin-top: 20px;
+}
+.col-title-team{
+    border-bottom:1px solid gray;
+    padding-bottom:10px;
+}
+.teamDr{
+    display:inline-block;
+}
+.img-team-driver{
+    width: 45px;
+    height: 45px;
+    margin-right:10px;
+    margin-top:-1px;
+}
+.div-team-driver{
+   border-bottom-right-radius:20px;
+   border-bottom:1px solid gray;
+   border-right:1px solid gray;
+   margin-top:15px;
+}

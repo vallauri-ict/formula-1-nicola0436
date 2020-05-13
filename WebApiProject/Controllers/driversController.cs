@@ -17,7 +17,6 @@ namespace WebApiProject.Controllers
             db.GetDrivers();
             return db.Drivers.Values;
         }
-        
         public IHttpActionResult GetDriver(int id)
         {
             db.GetDrivers();
