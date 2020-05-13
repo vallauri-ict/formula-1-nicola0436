@@ -212,7 +212,7 @@ namespace FormulaOneDll
                 using (con)
                 {
                     SqlCommand command = new SqlCommand(
-                      "SELECT * FROM Races_Scores;",
+                      "SELECT * FROM RacesScores;",
                       con);
                     con.Open();
 
@@ -232,6 +232,39 @@ namespace FormulaOneDll
                 }
             }
         }
+        public void GetPositionRacesScores(int pos,bool forceReload = false)
+        {
+            if (forceReload || this.RacesScores == null)
+            {
+                GetDrivers();
+                GetRaces();
+                GetScores();
+                this.RacesScores = new Dictionary<int, RacesScore>();
+                var con = new SqlConnection(CONNECTION_STRING);
+                using (con)
+                {
+                    SqlCommand command = new SqlCommand(
+                      "SELECT * FROM RacesScores WHERE extPos="+pos+";",
+                      con);
+                    con.Open();
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        RacesScore rs = new RacesScore(
+                            reader.GetInt32(0),
+                            Drivers[reader.GetInt32(1)],
+                            Scores[reader.GetInt32(2)],
+                            Races[reader.GetInt32(3)],
+                            reader.GetString(4)
+                        );
+                        this.RacesScores.Add(rs.ID, rs);
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
         public void GetScores(bool forceReload = false)
         {
             if (forceReload || this.Scores == null)

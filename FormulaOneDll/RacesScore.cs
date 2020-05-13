@@ -25,7 +25,7 @@ namespace FormulaOneDll
         public int ID { get => id; set => id = value; }
         public Driver Driver { get => driver; set => driver = value; }
         public Scores Pos { get => pos; set => pos = value; }
-        public Race Race { get => race; set => Race = value; }
+        public Race Race { get => race; set => race = value; }
         public string FastestLap { get => fastestLap; set => fastestLap = value; }
     }
 }

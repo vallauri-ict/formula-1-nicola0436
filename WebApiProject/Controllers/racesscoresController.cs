@@ -8,15 +8,17 @@ using System.Web.Http;
 
 namespace WebApiProject.Controllers
 {
+    [RoutePrefix("api/racesscores")]
     public class racesscoresController : ApiController
     {
         DbTools db = new DbTools();
 
-        public IEnumerable<RacesScore> GetAllCountries()
+        public IEnumerable<RacesScore> GetAllRacesScores()
         {
             db.GetRacesScores();
             return db.RacesScores.Values;
         }
+        [Route("{id:int}")]
         public IHttpActionResult GetRacesScore(int id)
         {
             db.GetRacesScores();
@@ -24,6 +26,12 @@ namespace WebApiProject.Controllers
                 return NotFound();
 
             return Ok(db.RacesScores[id]);
+        }
+        [Route("position/{pos:int}")]
+        public IEnumerable<RacesScore> GetWinnersRacesScore(int pos)
+        {
+            db.GetPositionRacesScores(pos);
+            return db.RacesScores.Values;
         }
     }
 }

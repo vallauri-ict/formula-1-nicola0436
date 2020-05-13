@@ -8,8 +8,25 @@
 }
 body {
     font-family: F1;
-    color:black;
+    color: black;
+    letter-spacing: 1px;
 }
+nav .navbar-nav li a {
+    color: white !important;
+    font-size: larger;
+    padding: 20px;
+}
+nav .navbar-nav li:hover a {
+    color: #e10600 !important;
+}
+nav .navbar-nav li:hover{
+    background-color: white !important;
+}
+.navbar-dark {
+    background-color: #e10600 !important;
+    padding:0px;
+}
+
 h1 {
     font-size: 62px;
     font-weight: 900;
@@ -28,34 +45,23 @@ h1 {
     margin-right: 1%;
     padding-left: 1px;
 }
-    .card:hover {
-        border-top: 2px solid #e10600;
-        border-right: 2px solid #e10600;
-        transform: translateY(-10px);
-        transition-duration: 0.5s;
-    }
-.title-name {
-    font-size: 1.5em !important;
-    font-weight:900 !important;
+.card:hover {
+    border-top: 2px solid #e10600;
+    border-right: 2px solid #e10600;
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
 }
-.title-lastname {
+.title-lastname{
     padding-bottom: 10px;
     border-bottom: 1px solid gray;
     font-size: 1.5em !important;
     font-weight: 900 !important;
 }
-.title-country {
+.title-country{
     margin-top: 20px;
     margin-left: 20px;
 }
-.navbar-dark {
-    background-color: #e10600 !important;
-}
-.nav-item{
-    font-size:larger;
-    padding:10px;
-}
-#container {
+#container{
     margin-bottom: 100px;
 }
 .title-team {
@@ -79,11 +85,62 @@ h1 {
     width: 45px;
     height: 45px;
     margin-right:10px;
-    margin-top:-1px;
+    margin-top:-3px;
 }
 .div-team-driver{
    border-bottom-right-radius:20px;
    border-bottom:1px solid gray;
    border-right:1px solid gray;
    margin-top:15px;
+}
+.img-circuit{
+    border-top-right-radius: 20px;
+    border-top: 5px solid #e10600;
+    border-right: 5px solid #e10600;
+    margin-top: 2%;
+    width:100%;
+}
+.second-title-circuit {
+    margin-top: 2%;
+    margin-bottom: 40px;
+}
+.title-circuit {
+    font-size: 40px;
+    font-weight: 900;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+.table-head-circuits {
+    background-color: black;
+    color: white;
+}
+.table-circuit {
+    border-radius: 20px !important;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    overflow: hidden;
+}
+.table-circuit:hover .table-head-circuits {
+    background-color: #e10600;
+
+}
+.table-circuit:hover {
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
+}
+.hr-circuit {
+    margin: 40px;
+    border-bottom: 2px solid black;
+}
+.tr-races:hover{
+    background-color: rgba(255,0,0,0.3) !important;
+}
+.table-races{
+    border-top-right-radius:20px;
+    overflow:hidden;
+}
+.trhead-races{
+    background-color: #e10600 !important;
+    color:white;
 }

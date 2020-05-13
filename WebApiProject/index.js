@@ -21,12 +21,13 @@ $(function () {
                 $("<img>").addClass("img-fluid float-right").prop("src", driver.Img).appendTo(col5);
                 let bodyCard = $("<div>").addClass("card-body").appendTo(col7);
                 let bodyCol = $("<div>").addClass("col").appendTo(bodyCard);
-                $("<h4>").addClass("title-name text-center").text(driver.Firstname).appendTo(bodyCol); 
-                $("<h4>").addClass("title-lastname text-center").text(driver.Lastname).appendTo(bodyCol);
+                $("<p>").text(driver.Firstname).appendTo(bodyCol); 
+                $("<h4>").addClass("title-lastname ").text(driver.Lastname).appendTo(bodyCol);
                 $("<br>").appendTo(bodyCol);
                 $("<p>").text("POB: " + driver.PlaceOfBirthday).appendTo(bodyCol);
-                let dt = new Date(driver.Dob);
-                $("<p>").text("DOB: " + dt.getDay()+"/"+dt.getMonth()+"/"+dt.getFullYear()).appendTo(bodyCol);
+                let dt = (driver.Dob.split('T')[0].split('-'));
+                $("<p>").text("DOB: " + dt[2] + "/" + dt[1] + "/" + dt[0]).appendTo(bodyCol);
+                console.log(driver);
             }
         });
     });
@@ -63,9 +64,68 @@ $(function () {
     });
     $("#linkCircuits").on("click", function () {
         container.html("");
-        containerTitlet.text("F1 Circuits 2020");
+        containerTitle.text("F1 Circuits 2020");
         containerDesc.text("");
+        inviaRichiesta("/circuits", function (data) {
+            let row = $("<div>").addClass("row justify-content-center").appendTo(container);
+            for (let circuit of data) {
+                $("<div>").addClass("col-12 text-center title-circuit").prop("id",circuit.ID).text(circuit.Country.CountryName).appendTo(row);
+                let div = $("<div>").addClass("col-5").appendTo(row);
+                $("<img>").addClass("img-fluid img-circuit").prop("src", circuit.Img).appendTo(div);
+                div = $("<div>").addClass("col-5").appendTo(row);
+                $("<h3>").addClass("text-center second-title-circuit").text(circuit.Name).appendTo(div);
+                let divtable = $("<div>").addClass("table-circuit").appendTo(div);
+                let table = $("<table>").addClass("table table-striped").appendTo(divtable);
+                let thead = $("<thead>").addClass("table-head-circuits").appendTo(table);
+                let tr = $("<tr>").appendTo(thead);
+                let circuitLength = circuit.Length / 1000;
+                $("<th>").text("Circuit length").appendTo(tr);
+                $("<th>").text(circuitLength+" km").appendTo(tr);
+                let tbody = $("<tbody>").addClass("text-muted").appendTo(table);
+                tr = $("<tr>").appendTo(tbody);
+                $("<td>").text("Number of laps").appendTo(tr);
+                $("<td>").text(circuit.NLaps).appendTo(tr);
+                tr = $("<tr>").appendTo(tbody);
+                $("<td>").text("Race distance").appendTo(tr);
+                $("<td>").text((circuitLength * circuit.NLaps)+" km").appendTo(tr);
+                tr = $("<tr>").appendTo(tbody);
+                $("<td>").text("Lap record").appendTo(tr);
+                $("<td>").text(circuit.RecordLap).appendTo(tr);
+                $("<div>").addClass("col-9 hr-circuit").appendTo(row);
+            }
+        });
     });
+    $("#linkRaces").on("click", function () {
+        container.html("");
+        containerTitle.text("2019 Races Results");
+        containerDesc.text("");
+        inviaRichiesta("/racesscores/position/1", function (data) {
+            let row = $("<div>").addClass("row justify-content-center").appendTo(container);
+            let divtable = $("<div>").addClass("table-responsive col-10").appendTo(row);
+            let table = $("<table>").addClass("table table-striped table-races").appendTo(divtable);
+            let thead = $("<thead>").appendTo(table);
+            let tbody = $("<tbody>").appendTo(table);
+            let tr = $("<tr>").addClass("trhead-races").appendTo(thead);
+            $("<th>").text("GRAND PRIX").appendTo(tr);
+            $("<th>").text("CIRCUIT").appendTo(tr);
+            $("<th>").text("DATE").appendTo(tr);
+            $("<th>").text("WINNER").appendTo(tr);
+            $("<th>").text("LAPS").appendTo(tr);
+            $("<th>").text("FASTEST LAP").appendTo(tr);
+            for (let racesscores of data) {
+                console.log(racesscores);
+                let dt = (racesscores.Race.Date.split('T')[0].split('-'));
+                tr = $("<tr>").prop("id", racesscores.ID).addClass("tr-races").appendTo(tbody);
+                $("<td>").text(racesscores.Race.Circuit.Country.CountryName).appendTo(tr);
+                $("<td>").text(racesscores.Race.Circuit.Name).appendTo(tr);
+                $("<td>").text(dt[2]+"/"+dt[1]+"/"+dt[0]).appendTo(tr);
+                $("<td>").text(racesscores.Driver.Firstname + " " + racesscores.Driver.Lastname).appendTo(tr);
+                $("<td>").text(racesscores.Race.Circuit.NLaps).appendTo(tr);
+                $("<td>").text(racesscores.FastestLap).appendTo(tr);
+            }
+        });
+    });
+
 });
 
 function inviaRichiesta(parameters,callbackFunction) {
